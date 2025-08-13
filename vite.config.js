@@ -191,7 +191,7 @@ logger.error = (msg, options) => {
 
 export default defineConfig({
 	customLogger: logger,
-	base: 'kthrinath2227/onlineFormpage/', 
+	base: '/onlineFormpage/', 
 	plugins: [
 		...(isDev ? [inlineEditPlugin(), editModeDevPlugin()] : []),
 		react(),
