@@ -1,0 +1,47 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --medical-blue: #0066cc;
+  --medical-green: #00a86b;
+  --medical-light-blue: #e6f3ff;
+  --medical-gray: #f8fafc;
+}
+
+body {
+  @apply bg-gradient-to-br from-blue-50 via-white to-green-50 text-gray-800;
+  font-family: 'Inter', sans-serif;
+}
+
+.medical-gradient {
+  background: rgb(8,146,208);
+background: rgb(0,84,180);
+background: linear-gradient(159deg, rgba(0,84,180,1) 0%, rgba(64,224,208,1) 100%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.medical-shadow {
+  box-shadow: 0 10px 40px rgba(0, 102, 204, 0.1);
+}
+
+.pulse-medical {
+  animation: pulse-medical 2s infinite;
+}
+
+@keyframes pulse-medical {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(247, 245, 245, 0);
+  }
+}
