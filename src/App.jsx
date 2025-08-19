@@ -18,6 +18,7 @@ function App() {
    phoneNumber: "",
    gender: "",
    age: "",
+   location: "",
    appointmentDate: '',
    appointmentTime: '',
    appointmentType: '',
@@ -50,12 +51,13 @@ function App() {
 *Phone:* ${formData.phoneNumber}%0A
 *Gender:* ${formData.gender}%0A
 *Age:* ${formData.age}%0A
+*Location:* ${formData.location}%0A
 *Date:* ${formData.appointmentDate}%0A
 *Time:* ${formData.appointmentTime}%0A
 *Type:* ${formData.appointmentType}%0A
 *Symptoms:* ${formData.symptoms}`;
 
-  const whatsappNumber = "919381187905"; // Your WhatsApp number without + sign
+  const whatsappNumber = "919392648120";
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   // Open WhatsApp
@@ -72,6 +74,7 @@ function App() {
     phoneNumber: "",
     gender: "",
     age: "",
+    location: "",
     appointmentDate: '',
     appointmentTime: '',
     appointmentType: '',
@@ -134,7 +137,7 @@ function App() {
               <div className="hidden md:flex items-center space-x-6">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span className="text-sm">+91 98765 43210</span>
+                  <span className="text-sm">+91 93926 48120</span>
                 </div>
               </div>
             </div>
@@ -196,7 +199,7 @@ function App() {
                 <img  
                   className="w-full h-96 object-cover rounded-2xl medical-shadow" 
                   alt="Professional physiotherapy clinic"
-                  src="https://images.unsplash.com/photo-1629909613638-0e4a1fad8f81" 
+                  src="https://ik.imagekit.io/ThedevsTechnologies/electro-stimulation-in-physical-therapy-to-a-young-woman-photo.jpg?updatedAt=1755582438776" 
                 />
                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl medical-shadow">
                   <div className="flex items-center space-x-3">
@@ -267,7 +270,7 @@ function App() {
         type="tel"
         value={formData.phoneNumber}
         onChange={handleInputChange}
-        placeholder="+91 98765 43210"
+        placeholder="919392648120"
         required
       />
     </div>
@@ -304,6 +307,96 @@ function App() {
         placeholder="Enter your age"
       />
     </div>
+    <div className="space-y-2">
+  <Label htmlFor="location" className="text-gray-700 font-medium">
+    Location *
+  </Label>
+  <Select
+    id="location"
+    name="location"
+    value={formData.location}
+    onChange={handleInputChange}
+    required
+  >
+    <option value="">Select Your Location</option>
+    <option value="Ajit Singh Nagar">Ajit Singh Nagar</option>
+    <option value="Arul Nagar">Arul Nagar</option>
+    <option value="Ashok Nagar">Ashok Nagar</option>
+    <option value="Auto Nagar">Auto Nagar</option>
+    <option value="Ayodhya Nagar">Ayodhya Nagar</option>
+    <option value="Ayyappa Nagar">Ayyappa Nagar</option>
+    <option value="Bandar Road">Bandar Road</option>
+    <option value="Bapanayyanagar">Bapanayyanagar</option>
+    <option value="Bavapijet">Bavapijet</option>
+    <option value="Benz Circle">Benz Circle</option>
+    <option value="Bhagat Singh Nagar">Bhagat Singh Nagar</option>
+    <option value="Bharathi Nagar">Bharathi Nagar</option>
+    <option value="Bhavanipuram">Bhavanipuram</option>
+    <option value="Bhimannavaripeta">Bhimannavaripeta</option>
+    <option value="Bramandha Reddy Nagar">Bramandha Reddy Nagar</option>
+    <option value="Canal Road">Canal Road</option>
+    <option value="Chalasani Nagar">Chalasani Nagar</option>
+    <option value="Chittinagar">Chittinagar</option>
+    <option value="Chowdhary Pet">Chowdhary Pet</option>
+    <option value="Christurajupuram">Christurajupuram</option>
+    <option value="Currency Nagar">Currency Nagar</option>
+    <option value="Devi Nagar">Devi Nagar</option>
+    <option value="Durga Agraham">Durga Agraham</option>
+    <option value="Enikepadu">Enikepadu</option>
+    <option value="Fakirigudem">Fakirigudem</option>
+    <option value="Fraserpeta">Fraserpeta</option>
+    <option value="Gayatri Nagar">Gayatri Nagar</option>
+    <option value="Gollapudi">Gollapudi</option>
+    <option value="Governorpeta">Governorpeta</option>
+    <option value="Gunadala">Gunadala</option>
+    <option value="Hanumanpet">Hanumanpet</option>
+    <option value="Jojinagar">Jojinagar</option>
+    <option value="Kaleswara Rao Market">Kaleswara Rao Market</option>
+    <option value="Kamayyathopu">Kamayyathopu</option>
+    <option value="Kanuru">Kanuru</option>
+    <option value="Krishnalanka">Krishnalanka</option>
+    <option value="Labbipeta">Labbipeta</option>
+    <option value="LEPL Icon">LEPL Icon</option>
+    <option value="LIC Colony">LIC Colony</option>
+    <option value="Lurdhunagar">Lurdhunagar</option>
+    <option value="Mallikarjunapeta">Mallikarjunapeta</option>
+    <option value="Milk Colony">Milk Colony</option>
+    <option value="Moghalrajpuram">Moghalrajpuram</option>
+    <option value="Mylavaram Vari Street">Mylavaram Vari Street</option>
+    <option value="Nehru Nagar">Nehru Nagar</option>
+    <option value="New Rajarajeswaripeta">New Rajarajeswaripeta</option>
+    <option value="NH-9">NH-9</option>
+    <option value="Nidamanuru">Nidamanuru</option>
+    <option value="Patamata">Patamata</option>
+    <option value="Vinchipeta">Vinchipeta</option>
+    <option value="Yanamalakuduru">Yanamalakuduru</option>
+    <option value="Payakapuram">Payakapuram</option>
+    <option value="PNT Colony">PNT Colony</option>
+    <option value="Poranki">Poranki</option>
+    <option value="Ramalingeswara Nagar">Ramalingeswara Nagar</option>
+    <option value="Ramarajunagar">Ramarajunagar</option>
+    <option value="Ramavarappadu">Ramavarappadu</option>
+    <option value="Ranga Nagar">Ranga Nagar</option>
+    <option value="Ranigaritota">Ranigaritota</option>
+    <option value="RR Nagar">RR Nagar</option>
+    <option value="RTC Colony">RTC Colony</option>
+    <option value="Sanath Nagar">Sanath Nagar</option>
+    <option value="Satyanarayanapuram Main Road">Satyanarayanapuram Main Road</option>
+    <option value="Satyanarayana Puram">Satyanarayana Puram</option>
+    <option value="Sidhartha Nagar">Sidhartha Nagar</option>
+    <option value="Sri Ramachandra Nagar">Sri Ramachandra Nagar</option>
+    <option value="Sriram Nagar">Sriram Nagar</option>
+    <option value="Stata Bank Colony">Stata Bank Colony</option>
+    <option value="Station Road">Station Road</option>
+    <option value="Surya Rao Peta">Surya Rao Peta</option>
+    <option value="Tadigadapa Main Road">Tadigadapa Main Road</option>
+    <option value="Tarapet">Tarapet</option>
+    <option value="Tulasi Nagar">Tulasi Nagar</option>
+    <option value="Vambay Colony">Vambay Colony</option>
+    <option value="Vidhyadharapuram">Vidhyadharapuram</option>
+  </Select>
+</div>
+
   </div>
 </div>
 
@@ -423,6 +516,45 @@ function App() {
             </motion.div>
           </div>
         </motion.section>
+        <motion.a
+  href="https://wa.me/919392648120"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+  initial={{ scale: 1, y: 20, opacity: 0 }}
+  animate={{ scale: 1, y: 0, opacity: 1 }}
+  whileHover={{ scale: 1.15, boxShadow: "0 8px 24px rgba(37,211,102,0.25)" }}
+  whileTap={{ scale: 0.95 }}
+  transition={{
+    type: "spring",
+    stiffness: 250,
+    damping: 18,
+    delay: 0.5
+  }}
+  style={{
+    position: "fixed",
+    bottom: "28px",
+    right: "28px",
+    zIndex: 1000,
+    width: "56px",
+    height: "56px",
+    borderRadius: "50%",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+    background: "linear-gradient(135deg,#25D366,#128C7E)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer"
+  }}
+>
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+    <circle cx="16" cy="16" r="16" fill="#25D366"/>
+    <path
+      d="M22.675 19.92c-.375-.188-2.212-1.093-2.553-1.219-.339-.125-.583-.188-.823.188-.238.375-.938 1.218-1.15 1.469-.212.25-.4.282-.749.094-.348-.188-1.469-.541-2.796-1.723-1.033-.925-1.731-2.066-1.935-2.415s-.021-.541.167-.729c.172-.172.384-.446.573-.669.192-.223.256-.375.384-.623.125-.25.062-.469-.031-.657-.094-.188-.823-1.977-1.137-2.734-.302-.729-.609-.615-.823-.625-.214-.011-.469-.014-.719-.014-.25 0-.656.093-1.001.444-.344.349-1.314 1.283-1.314 3.132s1.348 3.627 1.536 3.882c.188.255 2.669 4.086 6.477 4.059 1.183-.008 2.062-.406 2.546-.801.484-.396 1.146-1.099 1.314-1.33.167-.229.167-.437.119-.625zm-6.522-12.671c-4.736 0-8.576 3.84-8.576 8.576 0 1.511.402 2.981 1.172 4.265l-1.09 3.978a.954.954 0 0 0 .295 1.009.947.947 0 0 0 1.011.164l4.149-1.652c1.222.773 2.615 1.184 4.039 1.182 4.737 0 8.577-3.84 8.577-8.576s-3.84-8.576-8.577-8.576zm6.693 14.021c-.396.653-1.917 1.895-2.703 2.017-.73.115-1.982.207-3.023-.854-2.323-2.228-4.037-4.195-4.037-6.387 0-1.303.641-2.643 1.299-3.093.657-.448.987-.589 1.269-.421.28.167 1.078 2.17 1.177 2.389.099.219.165.312.041.489-.138.194-.276.395-.422.605-.147.214-.303.417-.406.541-.104.125-.126.207-.042.37.084.165.373.647.726 1.066.353.422 1.295 1.345 2.019 1.763.278.166.438.172.562.084.123-.088.373-.416.521-.645.147-.229.281-.187.479-.125.199.062 1.736.827 2.011.927.273.101.224.396.129.648z"
+      fill="#fff"
+    />
+  </svg>
+</motion.a>
 
         {/* Contact Information */}
         <motion.section 
@@ -457,7 +589,7 @@ function App() {
                 </div>
                 <h3 className="text-xl font-semibold">Contact</h3>
                 <p className="text-blue-100">
-                  Phone: +91 98765 43210<br />
+                  Phone: +919392648120<br />
                 </p>
               </div>
             </div>
